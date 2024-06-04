@@ -2,7 +2,7 @@
 
 1. First I created a class for some students.
 2. Then I created Array of object for each students.
-3. Each students ID number, Name, Bangla number, English number, Maths number are taken as input.
+3. Each students ID number, Name, Bangla mark, English mark, Maths mark are taken as input.
 4. I have added the marks of the three subjects of the students and found out the average marks.
 5. Then I calculated the grade accordung to the student's average mark.
 6. I have arranged the roll of each student according to the total mark.
