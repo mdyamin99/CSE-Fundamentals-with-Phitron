@@ -1,0 +1,11 @@
+10
+100 Asif 82 75 91
+101 Karim 70 79 85
+102 Rahim 45 39 45
+103 Abir 90 89 95
+104 Rafik 75 82 91
+105 Sifat 70 79 85
+106 Ibrahim 90 95 97
+107 Habib 70 59 27
+108 Labib 20 39 27
+109 Ismail 35 65 61
