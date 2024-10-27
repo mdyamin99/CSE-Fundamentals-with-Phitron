@@ -1,28 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> v[1005];
-bool vis[1005];
+vector<int> v[100005];
+int vis[100005];
+int dis[100005];
+
 void bfs(int src)
 {
     queue<int> q;
     q.push(src);
     vis[src]=true;
+    dis[src]=0;
     while(!q.empty())
     {
         int par = q.front();
         q.pop();
-        cout<<par<<endl;
         for(int child:v[par])
         {
             if(vis[child]==false)
             {
-                q.push(child);
                 vis[child]=true;
+                q.push(child);
+                dis[child]=dis[par]+1;
             }
         }
     }
 }
+
 int main()
 {
     int n,e;
@@ -34,9 +38,18 @@ int main()
         v[a].push_back(b);
         v[b].push_back(a);
     }
-    // int src;
-    // cin>>src;
     memset(vis,false,sizeof(vis));
-    bfs(2);
+    memset(dis,-1,sizeof(dis));
+    int src,d,k;
+    cin>>src>>d>>k;
+    bfs(src);
+    if(dis[d] != -1 && dis[d] <= k*2)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
     return 0;
 }
